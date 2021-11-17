@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     public AudioSource startingBell;
     public AudioSource gun;
+    public AudioSource loseSound;
 
     public float timeDelayToShot = 3f;
     public float timeDelayToReset = 5f;
@@ -84,6 +85,7 @@ public class GameManager : MonoBehaviour
     {
         isRoundFinished = true;
         gun.Play();
+        loseSound.Play();
         if (isTimeToShot)
             PlayerWon(shooterOrder);
         else
